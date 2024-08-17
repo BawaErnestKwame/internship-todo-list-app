@@ -9,23 +9,27 @@ body {
     background: linear-gradient(-45deg, darkorange,50%,blue);
     display: flex;
     justify-content: center;
+    background-size: 200% 200%;
     align-items: center;
     height: 100vh;
     margin: 0;
-    animation: backgrounds 3s linear infinite;
+    animation: color 3s infinite;
 }
 
-@keyframes backgrounds {
+@keyframes color{
     0%{
-        transform: translate(45deg);
+        background-position: 0 50%;
+        
     }
 
     50%{
-        transition: 3s;
+        background-position: 100% 50%;
+     
     }
 
     100%{
-        transition: 4s;
+        background-position: 0 50%;
+       
     }
     
 }
