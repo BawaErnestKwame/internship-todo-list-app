@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, darkorange,50%,blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgrounds 3s linear infinite;
+}
+
+@keyframes backgrounds {
+    0%{
+        transform: translate(45deg);
+    }
+
+    50%{
+        transition: 3s;
+    }
+
+    100%{
+        transition: 4s;
+    }
+    
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::before{
+    background-color: #f50569;
+    content: "";
+    width: 8rem;
+    height: 3px;
+    position: absolute;
+    border-radius: 3px;
+    top: 35px;
+    left: 120px;
+    animation: before 2s linear infinite;
+    transform: translateX(50%);
+    
+    
+}
+
+@keyframes before {
+    0%{
+        width: 0rem;
+    }
+
+    50%{
+        width: 6rem;
+    }
+
+    100%{
+        width: 0rem;
+    }
+    
+}
+
+.input-group {
+    display: flex;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f50569;
+    border-radius: 4px;
+    outline: none;
+ 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #010f5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: .5s;
+   
+}
+
+button:hover {
+    background-color: #0c3fad;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: #06243b;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fffefe;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+li span {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+li span:hover {
+    text-decoration: line-through;
+    color: rgb(243, 3, 3);
+}
+
+li button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
